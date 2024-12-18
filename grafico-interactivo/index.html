@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Interactivo con Chart.js y jQuery</title>
+    
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Incluir Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Incluir un poco de estilo CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #333;
+        }
+        canvas {
+            width: 80% !important;
+            height: 400px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        input[type="number"], input[type="text"] {
+            padding: 8px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gráfico Interactivo con Chart.js</h1>
+
+    <!-- Formulario para ingresar datos -->
+    <form id="dataForm">
+        <input type="text" id="label" placeholder="Etiqueta" required>
+        <input type="number" id="value" placeholder="Valor" required>
+        <button type="submit">Agregar al gráfico</button>
+    </form>
+
+    <!-- Área para mostrar el gráfico -->
+    <canvas id="myChart"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
